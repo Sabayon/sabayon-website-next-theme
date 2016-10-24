@@ -274,10 +274,13 @@ a[href='https://atlas.hashicorp.com/Sabayon/boxes/spinbase-amd64']::before {
     background-image: url("/img/vagrantcloud-logo.png");
 }
 
-h4 a[href$='/donate'] {
+a[href$='/donate'] {
     display: inline-block;
     font-size: 13px;
     line-height: 1.5;
+}
+
+h4 a[href$='/donate'] {
     color: #fff;
     background: #e74c3c;
     border: 2px solid #e74c3c;
@@ -294,25 +297,36 @@ h4 a[href$='/donate']:hover {
     text-decoration: none;
 }
 
-h4 a[href$='/donate']::before {
+h4 a[href$='/donate']::before,
+a[href$='/donate']::after {
     content: "\f004";
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     line-height: inherit;
-    color: #fff;
     background: inherit;
     border-color: inherit;
     height: auto;
     width: auto;
-    margin-right: 0.2em;
+    margin-left: 0.2em;
     padding: 0;
     border-radius: 0;
     vertical-align: middle;
 }
 
+h4 a[href$='/donate']::before {
+    color: #fff;
+    margin-right: 0.2em;
+}
 
-img[src$="press-header-roll_0.png"] {
+h4 a[href$='/donate']::after,
+li a[href$='/donate']::after {
+    content: "";
+    margin-right: 0;
+}
+
+img[src$="press-header-roll_0.png"],
+img[src="https://joostruis.files.wordpress.com/2015/09/plasma_sab.png?w=582&h=217"] {
     display: block;
     margin-left: auto;
     margin-right: auto;

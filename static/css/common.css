@@ -241,6 +241,7 @@ div.feature-box div.feature-box-icon i.image-icon.small {
       border: solid rgba(187, 184, 180, 0.7);
 }
 
+h3 a[href='http://dl.sabayon.org/iso/daily/daily.html']::before,
 li a[href$='.iso']::before,
 li a[href$='.img.xz']::before,
 li a[href='https://hub.docker.com/r/sabayon']::before,
@@ -250,6 +251,16 @@ li a[href='https://plus.google.com/+sabayon']::before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     margin-right: 0.2em;
+}
+
+h3 a[href='http://dl.sabayon.org/iso/daily/daily.html']::before {
+    color: inherit;
+    content: "\f0c3";
+    font-size: inherit;
+    height: auto;
+    margin-right: 0;
+    padding: 0;
+    width: auto;
 }
 
 li a[href$='.iso']::before,

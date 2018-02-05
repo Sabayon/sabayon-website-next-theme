@@ -80,6 +80,7 @@ main .sponsors ul li p {
 footer section {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 @media (min-width: 21em) {

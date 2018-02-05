@@ -1,27 +1,4 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        {{ partial "meta.html" . }}
-        <link rel="stylesheet" href="/css/grid.css" />
-        <link rel="stylesheet" href="/css/theme.css" />
-        <!--
-        {{ partial "header.includes.html" . }}
-        -->
-    </head>
-    <body>
-        <header>
-            {{ partial "navbar.html" . }}
-        </header>
-        <main>
-            {{ .Content }}
-        </main>
-        <aside>
-            {{ partial "menu.html" . }}
-        </aside>
-        <footer>
-            {{ partial "footer.links.html" . }}
-            {{ partial "footer.copyright.html" . }}
-            {{ partial "footer.includes.html" . }}
-        </footer>
-    </body>
-</html>
+{{ define "main" }}
+    <main>{{ .Content }}</main>
+    <aside>{{ partial "menu.html" . }}</aside>
+{{ end }}

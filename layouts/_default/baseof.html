@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{ partial "meta.html" . }}
+        <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+        <link rel="stylesheet" href="/css/grid.css" />
+        <link rel="stylesheet" href="/css/theme.css" />
+        <!--
+        {{ partial "header.includes.html" . }}
+        -->
+    </head>
+    <body>
+        {{ block "header" . }}
+            <header>
+                {{ partial "navbar.html" . }}
+            </header>
+        {{ end }}
+        {{ block "main" . }}{{ end }}
+        {{ block "footer" . }}
+            <footer>
+                {{ partial "footer.links.html" . }}
+                {{ partial "footer.copyright.html" . }}
+                {{ partial "footer.includes.html" . }}
+            </footer>
+        {{ end }}
+    </body>
+</html>

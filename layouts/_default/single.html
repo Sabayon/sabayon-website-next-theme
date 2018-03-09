@@ -1,4 +1,15 @@
 {{ define "main" }}
     <main>{{ .Content }}</main>
-    <aside>{{ partial "menu.html" . }}</aside>
+    <aside>
+        {{ $Site := .Site }}
+        {{- $asideItem := readDir "/content/_aside/" -}}
+        {{- range $asideItem }}
+            <section>
+                {{- $filepath := (printf "%s/%s" "_aside" .Name) -}}
+                {{ with $Site.GetPage "page" $filepath }}
+                    {{ .Content }}
+                {{ end }}
+            </section>
+        {{- end }}
+    </aside>
 {{ end }}

@@ -7,9 +7,9 @@
 @media (min-width: 21em) {
     .wrapper {
         grid-template-areas:
-          "header header"
-          "main aside"
-          "footer footer";
+          "header header header header"
+          "main   main   main   aside"
+          "footer footer footer footer";
     }
 }
 
@@ -27,6 +27,12 @@ aside {
 
 footer {
     grid-area: footer;
+}
+
+article,
+section {
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
 header nav {

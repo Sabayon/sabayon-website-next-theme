@@ -1,5 +1,7 @@
 {{ define "main" }}
-    <main>{{ .Content }}</main>
+    <main>
+        <article>{{ .Content }}</article>
+    </main>
     <aside>
         {{ $Site := .Site }}
         {{- $asideItem := readDir "/content/_aside/" -}}

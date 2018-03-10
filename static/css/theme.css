@@ -3,11 +3,21 @@
     --secondary-foreground-colour: lightgray;
     --background-colour: #111111;
     --text-colour: #d3d3d3;
+    --card-background-colour: #2b2e31;
+    --card-text-colour: #d3d3d3;
+    --card-border-colour: #6f6f6f;
 }
 
 body {
     background-color: var(--background-colour);
     color: var(--text-colour);
+}
+
+article,
+section {
+    background-color: var(--card-background-colour);
+    color: var(--card-text-colour);
+    border: 1px solid var(--card-border-colour);
 }
 
 h1,

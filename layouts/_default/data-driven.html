@@ -1,46 +1,12 @@
 {{ define "main" }}
-    {{- $jsonBaseName := .Params.json -}}
-    {{- $jsonPath := (printf "data/%s" $jsonBaseName) -}}
+    {{- $partial := .Params.partial -}}
+    {{- $jsonPath := .Params.json -}}
     {{- $data := getJSON $jsonPath -}}
     <main>
         <article>
             <h1>{{ .Title }}</h1>
-            <ol>
-                {{ range $data.mirrors }}
-                    <li>
-                        <h2>{{ .country }}</h2>
-                        <img src="{{ .flag }}" alt="Flag of {{ .country }}" />
-                        <ul>
-                            {{ range .mirrors }}
-                                <li>
-                                    <p>
-                                        <strong>Connection speed:</strong>
-                                        {{ .speed.formatted }}
-                                    </p>
-                                    {{ range .ftp }}
-                                        <p>
-                                            FTP: <a href="{{ . }}">{{ . }}</a>
-
-                                        </p>
-                                    {{ end }}
-                                    {{ range .http }}
-                                        <p>
-                                            HTTP: <a href="{{ . }}">{{ . }}</a>
-
-                                        </p>
-                                    {{ end }}
-                                    {{ range .rsync }}
-                                        <p>
-                                            Rsync: <a href="{{ . }}">{{ . }}</a>
-
-                                        </p>
-                                    {{ end }}
-                                </li>
-                            {{ end }}
-                        </ul>
-                    </li>
-                {{ end }}
-            </ol>
+            {{ .Content }}
+            {{ partial $partial (dict "data" $data) }}
         </article>
     </main>
 {{ end }}

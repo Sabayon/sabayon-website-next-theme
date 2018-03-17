@@ -16,8 +16,18 @@
                     {{ end }}
                 </ul>
             {{ else }}
-              {{ range .Sections }}
-                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+              {{ if .Data.Pages }}
+                {{ range .Data.Pages }}
+                  <p>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                  </p>
+                {{ end }}
+              {{ else }}
+                {{ range .Sections }}
+                    <p>
+                      <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </p>
+                {{ end }}
               {{ end }}
             {{ end }}
         </article>

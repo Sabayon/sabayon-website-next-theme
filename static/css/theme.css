@@ -47,6 +47,10 @@ a {
     color: var(--text-colour);
 }
 
+nav li a.active {
+    color: var(--primary-foreground-colour);
+}
+
 #sabayon-linux,
 #sabayon-linux + p {
     display: inline-block;

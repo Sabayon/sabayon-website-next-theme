@@ -88,6 +88,22 @@ main section p {
     margin-block-end: 1em;
 }
 
+main ol.pagenav {
+    display: flex;
+    flex-direction: row;
+
+    list-style: none;
+}
+
+main ol.pagenav li::before {
+    display: inline;
+    content: ">";
+}
+
+main ol.pagenav li {
+    padding: 0 0.5em 0 0;
+}
+
 main .sponsors ul {
     display: grid;
 }

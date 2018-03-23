@@ -88,16 +88,26 @@ main section p {
     margin-block-end: 1em;
 }
 
+main .pagenav-label {
+    display: inline;
+}
+
 main ol.pagenav {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
 
     list-style: none;
+    margin-block-start: 0;
+    padding-inline-start: 0;
 }
 
 main ol.pagenav li::before {
     display: inline;
     content: ">";
+}
+
+main ol.pagenav li:first-of-type::before {
+    content: "";
 }
 
 main ol.pagenav li {

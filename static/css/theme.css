@@ -6,6 +6,7 @@
     --card-background-colour: #2b2e31;
     --card-text-colour: #d3d3d3;
     --card-border-colour: #6f6f6f;
+    --global-padding: 0.5em;
 }
 
 body {
@@ -47,17 +48,17 @@ a {
     color: var(--text-colour);
 }
 
+sup {
+    /* TODO: Add normalizr.css */
+    font-size: 50%;
+}
+
 nav li a.active {
     color: var(--primary-foreground-colour);
 }
-
-#sabayon-linux,
-#sabayon-linux + p {
-    display: inline-block;
-}
-
-#sabayon-linux + p a {
-    background-color: var(--primary-foreground-colour);
-    padding: 0.25em 0.5em;
-    text-decoration: none;
+.hero-image img {
+    /* Compensate padding of container */
+    max-width: calc(100% + 2 * var(--global-padding));
+    margin-left: calc(-1 * var(--global-padding));
+    margin-bottom: calc(-1.5 * var(--global-padding));
 }

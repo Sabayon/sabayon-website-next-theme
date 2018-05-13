@@ -49,16 +49,14 @@ a {
 }
 
 sup {
-    /* TODO: Add normalizr.css */
     font-size: 50%;
 }
 
 nav li a.active {
     color: var(--primary-foreground-colour);
 }
+
 .hero-image img {
-    /* Compensate padding of container */
     max-width: calc(100% + 2 * var(--global-padding));
     margin-left: calc(-1 * var(--global-padding));
-    margin-bottom: calc(-1.5 * var(--global-padding));
 }

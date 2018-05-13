@@ -60,6 +60,7 @@ header nav ul {
     flex: 1 0 auto;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 
     list-style: none;
     margin-block-start: 0;
@@ -68,8 +69,6 @@ header nav ul {
 }
 
 header nav ul li {
-    flex: 1 0 auto;
-
     padding: 0.25em 0.5em;
 }
 
@@ -123,12 +122,22 @@ main ol.pagenav li {
 
 main .sponsors ul {
     display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 46em) {
+    main .sponsors ul {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 main .sponsors ul li {
     display: flex;
     flex: 1;
     flex-direction: row;
+
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 main .sponsors ul li p {
